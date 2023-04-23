@@ -3,8 +3,8 @@ import time
 import numpy as np
 import threading
 import random
-from pythonosc.udp_client import SimpleUDPClient    #pip install python-osc
-from flask import Flask, jsonify, render_template, request  #pip install Flask
+from pythonosc.udp_client import SimpleUDPClient
+from flask import Flask, jsonify, render_template, request
 
 # OSC
 send = False
@@ -50,13 +50,11 @@ def runOSC():
     # print(currentList)
     while True:
         if send == True:
-            client = SimpleUDPClient(target_ip, target_port)
+            client = SimpleUDPClient(target_ip, int(target_port))
             if in_order == False:
                 client.send_message(osc_command.replace("x", getNext()), 1)
-                # print(osc_command.replace("x", getNext()))
             else:
                 client.send_message(osc_command.replace("x", getRandom()), 1)
-                # print(osc_command.replace("x", getRandom()))
             time.sleep(lastAverage)
 
 t2 = threading.Thread(target=runOSC)
@@ -158,4 +156,4 @@ def help():
 
 if __name__ == '__main__':
     t2.start()
-    app.run(debug=True)
+    app.run(host="0.0.0.0", port=5000, debug=True)
