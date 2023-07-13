@@ -5,4 +5,4 @@ This is a simple tap tempo designed to send commnds to an ETC Ion light board, H
 
 
 ## Docker
-A [docker container](https://hub.docker.com/r/tonic92/osc-flask) is also available: `docker pull tonic92/osc-flask`
+A [docker container](https://hub.docker.com/r/tonic92/osc-flask) is also available: ```docker pull tonic92/osc-flask```
