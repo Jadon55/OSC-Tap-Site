@@ -5,7 +5,7 @@ A tap tempo for sending OSC commands, with an easy to use web interface
 
 ## Install
 ### Docker
-The recomended install is with a [Docker Container](https://hub.docker.com/r/tonic92/osc-flask): `docker pull tonic92/osc-flask`
+The recomended install is with the [Docker Container](https://hub.docker.com/r/tonic92/osc-flask): `docker pull tonic92/osc-flask`
 
 ## How To Use
 <img width="1407" alt="settings" src="https://github.com/Jadon55/OSC-Tap-Site/assets/78763124/df056155-0755-4d20-a1e7-624f5670ba1b">
